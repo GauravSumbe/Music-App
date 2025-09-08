@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="120" height="120">
+  <defs>
+    <!-- Gradient background -->
+    <linearGradient id="musicLibraryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff6ec4"/>
+      <stop offset="50%" stop-color="#a66cff"/>
+      <stop offset="100%" stop-color="#f7971e"/>
+    </linearGradient>
+
+    <!-- Glow filter -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#ffffff" flood-opacity="0.9"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded square background -->
+  <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#musicLibraryGrad)"/>
+
+  <!-- Library bookshelf (white strokes) -->
+  <path d="M20.5 14H11.5C8.8 14 7.7 14 7 15C6.3 16 6.8 17.3 7.6 19.5L8.7 22.5C9.1 23.6 9.3 24.3 9.8 24.7C10.3 25.1 11 25.1 12.4 25.1H19.6C21 25.1 21.7 25.1 22.2 24.7C22.7 24.3 22.9 23.6 23.3 22.5L24.4 19.5C25.2 17.3 25.7 16 25 15C24.3 14 23.2 14 20.5 14Z"
+        stroke="white" stroke-width="2" stroke-linecap="round" fill="none" filter="url(#glow)"/>
+  
+  <!-- Middle shelf -->
+  <path d="M23 11C23 10.5 23 10.2 22.9 10C22.8 9.7 22.6 9.5 22.3 9.4C22.1 9.3 21.8 9.3 21.3 9.3H10.7C10.2 9.3 9.9 9.3 9.7 9.4C9.4 9.5 9.2 9.7 9.1 10C9 10.2 9 10.5 9 11"
+        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#glow)"/>
+  
+  <!-- Top shelf -->
+  <path d="M20 6.5C20 6 20 5.7 19.9 5.5C19.8 5.2 19.6 5 19.3 4.9C19.1 4.8 18.8 4.8 18.3 4.8H13.7C13.2 4.8 12.9 4.8 12.7 4.9C12.4 5 12.2 5.2 12.1 5.5C12 5.7 12 6 12 6.5"
+        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" filter="url(#glow)"/>
+</svg>
