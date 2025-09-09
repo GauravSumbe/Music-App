@@ -82,7 +82,7 @@ const playmusic = ((track, pause = false) => {
 
 async function diapalyAlbums() {
 
-    let a = await fetch("/songs");
+    let a = await fetch("./songs");
     let response = await a.text();
 
     let div = document.createElement('div');
@@ -99,7 +99,7 @@ async function diapalyAlbums() {
 
             // Get the metadata of the folder
 
-            let b = await fetch(`/songs/${folder}/info.json`);
+            let b = await fetch(`./songs/${folder}/info.json`);
             let data = await b.json();
             console.log(data);
 
@@ -108,7 +108,7 @@ async function diapalyAlbums() {
                                                                         <div class="play">
                                                                             <img src="img/play.svg" alt="">
                                                                         </div>
-                                                                        <img class="cimg" src="songs/${folder}/cover.jpg" alt="">
+                                                                        <img class="cimg" src="./songs/${folder}/cover.jpg" alt="">
                                                                         <h2>${data.title}</h2>
                                                                         <p>${data.description}</p>
                                                                     </div>`
@@ -222,7 +222,7 @@ async function main() {
     Array.from(document.getElementsByClassName("cards")).forEach(e => {
         e.addEventListener('click', async item => {
             console.log('fetching songs');
-            songs = await getsongs(`songs/${item.currentTarget.dataset.folder}`);
+            songs = await getsongs(`./songs/${item.currentTarget.dataset.folder}`);
             playmusic(songs[0]);
 
 
@@ -235,3 +235,4 @@ async function main() {
 }
 
 main();
+
